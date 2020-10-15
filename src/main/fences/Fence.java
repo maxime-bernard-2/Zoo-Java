@@ -8,8 +8,8 @@ import java.util.Arrays;
 public class Fence {
 
     private String name;
-    private double area;
-    private int maxAnimals;
+    private final double area;
+    private final int maxAnimals;
     private ArrayList<Animal> animals;
     private int cleanliness;
 
@@ -60,4 +60,24 @@ public class Fence {
         }
     }
 
+
+    public String getName() {
+        return name;
+    }
+
+    public double getArea() {
+        return area;
+    }
+
+    public int getMaxAnimals() {
+        return maxAnimals;
+    }
+
+    public ArrayList<Animal> getAnimals() {
+        return animals;
+    }
+
+    public int getCleanliness() {
+        return cleanliness;
+    }
 }

@@ -3,7 +3,7 @@ package main.animals.model;
 public abstract class Animal {
 
     private String name;
-    private boolean sex;
+    private final boolean sex;
     private double weight;
     private double height;
     private int age;
