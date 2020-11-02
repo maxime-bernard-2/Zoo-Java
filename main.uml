@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>main</OriginalElement>
+  <nodes>
+    <node x="1095.2310252895659" y="1406.6029797742126">main.animals.Shark</node>
+    <node x="1258.0900777806028" y="1111.785243033222">main.animals.model.Animal</node>
+    <node x="966.9704926853512" y="1466.328237741771">main.animals.model.Other</node>
+    <node x="841.1003471542588" y="0.0">main.Zoo</node>
+    <node x="0.0" y="647.2198603618277">main.fences.Voliere</node>
+    <node x="384.78352127816134" y="1417.0443929735181">main.Main</node>
+    <node x="562.7532296888877" y="1478.8253527562144">main.animals.Whale</node>
+    <node x="1103.859752768058" y="196.5356331697501">main.Menu</node>
+    <node x="147.32547066006293" y="1193.3522858729189">main.animals.model.Hunter</node>
+    <node x="556.8214204559819" y="43.866784112485334">main.fences.Aquarium</node>
+    <node x="70.48230506469429" y="1049.5337535166093">main.animals.Tiger</node>
+    <node x="715.1811197436753" y="1500.4577133489101">main.animals.Eagle</node>
+    <node x="254.79261438906792" y="1315.9877430888864">main.animals.Wolf</node>
+    <node x="1400.9359435251622" y="801.8203941338816">main.fences.Fence</node>
+    <node x="164.52467815585192" y="353.5212725354199">main.animals.Pinguin</node>
+    <node x="272.0519149770147" y="247.86440726898275">main.animals.model.Aquatic</node>
+    <node x="95.59305400143614" y="495.9607814555985">main.animals.model.Bird</node>
+    <node x="1345.259550708185" y="491.2096714576734">main.Employee</node>
+    <node x="850.6792351515596" y="1506.8309212220483">main.animals.Bear</node>
+    <node x="397.80895375800685" y="160.46871103364163">main.animals.RedFish</node>
+    <node x="23.73968960729883" y="888.3941963944818">main.animals.model.Mammal</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="main.fences.Voliere" target="main.fences.Fence">
+      <point x="0.7723690120434412" y="-4.9399844239870845" />
+      <point x="0.7723690120434412" y="-4.9399844239870845" />
+    </edge>
+    <edge source="main.Employee" target="main.fences.Fence">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="main.animals.Eagle" target="main.animals.model.Mammal">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="main.animals.Shark" target="main.animals.model.Other">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="main.Main" target="main.Zoo">
+      <point x="-4.6981604667103625" y="-1.7109319767424722" />
+      <point x="-4.698160466710334" y="-1.7109319767424722" />
+    </edge>
+    <edge source="main.Main" target="main.fences.Fence">
+      <point x="-2.2193477126221524" y="-4.4804570894584685" />
+      <point x="-2.2193477126221524" y="-4.4804570894584685" />
+    </edge>
+    <edge source="main.animals.Tiger" target="main.animals.model.Animal">
+      <point x="0.7437222533762906" y="-4.944378344123038" />
+      <point x="0.7437222533762906" y="-4.944378344123038" />
+    </edge>
+    <edge source="main.animals.Wolf" target="main.animals.model.Hunter">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="main.animals.Bear" target="main.animals.model.Mammal">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="main.animals.RedFish" target="main.animals.model.Other">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="main.fences.Aquarium" target="main.animals.model.Aquatic">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="main.Main" target="main.Employee">
+      <point x="-3.2354654554668514" y="-3.812054995206722" />
+      <point x="-3.2354654554668514" y="-3.8120549952067506" />
+    </edge>
+    <edge source="main.Employee" target="main.animals.model.Animal">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="main.fences.Voliere" target="main.animals.model.Animal">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="main.animals.Whale" target="main.animals.model.Animal">
+      <point x="0.0" y="5.27174332797108" />
+      <point x="0.0" y="5.271743327970967" />
+    </edge>
+    <edge source="main.fences.Fence" target="main.animals.model.Animal">
+      <point x="4.570048741117262" y="2.0284611171556435" />
+      <point x="4.570048741117262" y="2.0284611171556435" />
+    </edge>
+    <edge source="main.animals.Tiger" target="main.animals.model.Mammal">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="main.animals.Eagle" target="main.animals.model.Animal">
+      <point x="-2.0628189423077217" y="-4.554643565775109" />
+      <point x="-2.062818942307672" y="-4.554643565775109" />
+    </edge>
+    <edge source="main.Zoo" target="main.fences.Aquarium">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="main.animals.Shark" target="main.animals.model.Aquatic">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="main.animals.Whale" target="main.animals.model.Mammal">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="main.animals.Pinguin" target="main.animals.model.Bird">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="main.animals.Pinguin" target="main.animals.model.Aquatic">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="main.Menu" target="main.Employee">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="main.Zoo" target="main.fences.Voliere">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="main.animals.Pinguin" target="main.animals.model.Animal">
+      <point x="-8.217371820545736" y="0.0" />
+      <point x="0.0" y="6.300568857047722" />
+    </edge>
+    <edge source="main.animals.Tiger" target="main.animals.model.Hunter">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="main.Menu" target="main.fences.Fence">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="main.animals.Shark" target="main.animals.model.Animal">
+      <point x="-3.2525191183600555" y="-3.7975148959158105" />
+      <point x="-3.2525191183600555" y="-3.7975148959158105" />
+    </edge>
+    <edge source="main.fences.Aquarium" target="main.fences.Fence">
+      <point x="-7.254628209039538" y="0.0" />
+      <point x="0.0" y="6.900771171315085" />
+    </edge>
+    <edge source="main.animals.RedFish" target="main.animals.model.Animal">
+      <point x="3.8309585656500076" y="-3.213060296395497" />
+      <point x="3.8309585656500076" y="-3.213060296395497" />
+    </edge>
+    <edge source="main.animals.Wolf" target="main.animals.model.Animal">
+      <point x="0.0" y="5.0158665361159365" />
+      <point x="0.0" y="5.01586653611605" />
+    </edge>
+    <edge source="main.animals.Wolf" target="main.animals.model.Mammal">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="main.animals.Eagle" target="main.animals.model.Bird">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="main.Zoo" target="main.Employee">
+      <point x="3.319014211445534" y="-3.7395380281824373" />
+      <point x="3.3190142114455057" y="-3.7395380281824373" />
+    </edge>
+    <edge source="main.animals.RedFish" target="main.animals.model.Aquatic">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="main.animals.Pinguin" target="main.animals.model.Mammal">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="main.fences.Aquarium" target="main.animals.model.Animal">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="main.animals.Whale" target="main.animals.model.Aquatic">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="main.Zoo" target="main.fences.Fence">
+      <point x="4.123708051094809" y="-2.8275487457046893" />
+      <point x="4.123708051094809" y="-2.8275487457046466" />
+    </edge>
+    <edge source="main.fences.Voliere" target="main.animals.model.Bird">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="main.Main" target="main.animals.Wolf">
+      <point x="-2.879020986986802" y="4.087938130217935" />
+      <point x="-2.879020986986802" y="4.087938130217935" />
+    </edge>
+    <edge source="main.Zoo" target="main.animals.model.Animal">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="main.Zoo" target="main.Menu">
+      <point x="2.2460161557830247" y="-4.467148019482011" />
+      <point x="2.2460161557830247" y="-4.467148019482011" />
+    </edge>
+    <edge source="main.animals.Bear" target="main.animals.model.Animal">
+      <point x="10.156030340297235" y="0.0" />
+      <point x="0.0" y="5.744384859051138" />
+    </edge>
+  </edges>
+  <settings layout="Circular" zoom="0.528324388789505" x="1003.5" y="828.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+    <Category>Inner Classes</Category>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

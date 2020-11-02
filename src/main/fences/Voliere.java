@@ -7,10 +7,12 @@ import main.animals.model.Bird;
 public class Voliere extends Fence {
 
     private final int height;
+    private boolean roofState;
 
     public Voliere(String name, double area, int height, int maxAnimals) {
         super(name, area, maxAnimals);
         this.height = height;
+        this.roofState = true;
     }
 
     @Override
@@ -22,12 +24,20 @@ public class Voliere extends Fence {
 
     @Override
     public void clean() {
-        super.clean();
-        System.out.println("Verification du toit de la cage ✔");
+        this.setCleanliness(1);
+        setRoofState(true);
     }
 
 
     public int getHeight() {
         return height;
+    }
+
+    public boolean isRoofState() {
+        return roofState;
+    }
+
+    public void setRoofState(boolean roofState) {
+        this.roofState = roofState;
     }
 }

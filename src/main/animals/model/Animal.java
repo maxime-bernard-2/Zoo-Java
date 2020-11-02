@@ -25,10 +25,10 @@ public abstract class Animal {
     public void eat() {
         if (this.conciousness) {
             this.hungry = 100;
+            System.out.println(this.name + " a bien mangé !");
         } else {
             System.out.println("Il faut reveiller " + this.name + " avant de le nourrir !");
         }
-
     }
 
     public void yell() {
@@ -79,4 +79,15 @@ public abstract class Animal {
         return health;
     }
 
+    public void setHungry(int hungry) {
+        this.hungry = hungry;
+    }
+
+    public void setConciousness(boolean conciousness) {
+        this.conciousness = conciousness;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
+    }
 }

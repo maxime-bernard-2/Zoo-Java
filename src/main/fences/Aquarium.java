@@ -6,12 +6,15 @@ import main.animals.model.Bird;
 
 public class Aquarium extends Fence {
 
-    private final int depth;
+
+    private int depth;
+    private final int initialDepth;
     private int salinity;
 
     public Aquarium(String name, double area, int depth, int salinity, int maxAnimals) {
         super(name, area, maxAnimals);
         this.depth = depth;
+        this.initialDepth = depth;
         this.salinity = salinity;
     }
 
@@ -24,8 +27,9 @@ public class Aquarium extends Fence {
 
     @Override
     public void clean() {
-        super.clean();
+        this.setCleanliness(1);
         this.salinity = 5;
+        this.depth = this.initialDepth;
     }
 
 
@@ -35,5 +39,13 @@ public class Aquarium extends Fence {
 
     public int getSalinity() {
         return salinity;
+    }
+
+    public void setDepth(int depth) {
+        this.depth = depth;
+    }
+
+    public void setSalinity(int salinity) {
+        this.salinity = salinity;
     }
 }

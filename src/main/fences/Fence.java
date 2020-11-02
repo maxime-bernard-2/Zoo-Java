@@ -19,6 +19,7 @@ public class Fence {
         this.area = area;
         this.maxAnimals = maxAnimals;
         this.animals = new ArrayList<Animal>(maxAnimals);
+        this.cleanliness = 1;
     }
 
     @Override
@@ -55,9 +56,7 @@ public class Fence {
     }
 
     public void clean() {
-        if (animals.size() == 0 && this.cleanliness == 3) {
-            this.cleanliness = 1;
-        }
+        this.cleanliness = 1;
     }
 
 
@@ -79,5 +78,9 @@ public class Fence {
 
     public int getCleanliness() {
         return cleanliness;
+    }
+
+    public void setCleanliness(int cleanliness) {
+        this.cleanliness = cleanliness;
     }
 }

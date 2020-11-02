@@ -11,6 +11,6 @@ public class Wolf extends Animal implements Mammal, Hunter {
 
     @Override
     public void wander() {
-
+        System.out.println(this.getName() + " se balade \uD83C\uDFC3");
     }
 }
