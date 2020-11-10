@@ -2,7 +2,13 @@ package main.animals;
 
 import main.animals.model.*;
 
+/**
+ * Classe publique Pinguin qui étend la classe abstraite Animal et implémente les interfaces Mammal, Aquatic et Bird
+ *
+ */
 public class Pinguin extends Animal implements Mammal, Bird, Aquatic {
+	
+	//Constructor
     public Pinguin(String name, boolean sex, double weight, double height, int age) {
         super(name, sex, weight, height, age);
     }

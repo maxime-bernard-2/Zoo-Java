@@ -1,7 +1,12 @@
 package main.animals.model;
 
+/**
+ * Classe abstraite Animal
+ *
+ */
 public abstract class Animal {
 
+	//Attributes
     private String name;
     private final boolean sex;
     private double weight;
@@ -11,6 +16,7 @@ public abstract class Animal {
     private boolean conciousness;
     private int health;
 
+    //Constructor
     public Animal(String name, boolean sex, double weight, double height, int age) {
         this.name = name;
         this.sex = sex;
@@ -22,23 +28,35 @@ public abstract class Animal {
         this.health = 100;
     }
 
+    /**
+     * Methode <strong>eat()</strong> permet aux animaux de manger (lorsqu'ils ne dorment pas)
+     */
     public void eat() {
         if (this.conciousness) {
             this.hungry = 100;
-            System.out.println(this.name + " a bien mangÃ© !");
+            System.out.println(this.name + " a bien mangé !");
         } else {
             System.out.println("Il faut reveiller " + this.name + " avant de le nourrir !");
         }
     }
 
+    /**
+     * Methode <strong>yell()</strong> permet aux animaux de produire un son
+     */
     public void yell() {
         System.out.println(name + "fait du bruit");
     }
 
+    /**
+     * Methode <strong>recover()</strong> permet aux animaux d'être soigné
+     */
     public void recover() {
         this.health = 100;
     }
 
+    /**
+     * Methode <strong>toggleConciousness()</strong> permet aux animaux de se réveiller ou s'endormir 
+     */
     public void toggleConciousness() {
         if(this.conciousness) {
             this.conciousness = false;
@@ -47,6 +65,8 @@ public abstract class Animal {
         }
     }
 
+    
+    //Getters and Setters
     public String getName() {
         return name;
     }
