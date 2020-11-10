@@ -1,5 +1,9 @@
 package main.animals.model;
 
+/**
+ * Interface CanSwim
+ *
+ */
 public interface CanSwim {
 
     public default void swim(String name) {
