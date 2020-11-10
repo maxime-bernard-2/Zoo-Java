@@ -6,8 +6,13 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * Classe publique Menu
+ *
+ */
 public class Menu {
 
+	//Attributes
     private final Scanner choice;
 
     public Menu() {
@@ -17,11 +22,11 @@ public class Menu {
     public void employeeMenu(Employee employee, ArrayList<Fence> fences) throws InterruptedException {
         Menu myMenu = new Menu();
 
-        System.out.println("/------------ Menu EmployÃ© ------------/");
-        System.out.println("[1] Affiche un enclot");
-        System.out.println("[2] Netoie un enclot");
-        System.out.println("[3] Nourrir les animaux d'un enclot");
-        System.out.println("[4] Echanger un animal d'enclot");
+        System.out.println("/------------ Menu Employé ------------/");
+        System.out.println("[1] Affiche un enclos");
+        System.out.println("[2] Netoie un enclos");
+        System.out.println("[3] Nourrir les animaux d'un enclos");
+        System.out.println("[4] Echanger un animal d'enclos");
         System.out.println("/-------------------------------------/");
         System.out.print("Choix: ");
 
@@ -50,7 +55,7 @@ public class Menu {
     }
 
     public void menuCheckFence(Employee employee, ArrayList<Fence> fences) throws InterruptedException {
-        System.out.println("/------------ Afficher un enclot ------------/");
+        System.out.println("/------------ Afficher un enclos ------------/");
         showAllFences(fences);
         System.out.println("/--------------------------------------------/");
         System.out.print("Choix: ");
@@ -58,7 +63,7 @@ public class Menu {
         int userchoice = choice.nextInt();
 
         if (userchoice > fences.size() || userchoice < 1) {
-            System.out.println("Mauvais choix recommence ! (il me faut un chiffre valide)");
+            System.out.println("Mauvais choix, recommence ! (il me faut un chiffre valide)");
             TimeUnit.SECONDS.sleep(2);
             menuCheckFence(employee, fences);
         } else {
@@ -70,7 +75,7 @@ public class Menu {
     }
 
     public void menuCleanFence(Employee employee, ArrayList<Fence> fences) throws InterruptedException {
-        System.out.println("/------------ Netoyer un enclot ------------/");
+        System.out.println("/------------ Nettoyer un enclos ------------/");
         showAllFences(fences);
         System.out.println("/--------------------------------------------/");
         System.out.print("Choix: ");
@@ -78,7 +83,7 @@ public class Menu {
         int userchoice = choice.nextInt();
 
         if (userchoice > fences.size() || userchoice < 1) {
-            System.out.println("Mauvais choix recommence ! (il me faut un chiffre valide)");
+            System.out.println("Mauvais choix, recommence ! (il me faut un chiffre valide)");
             TimeUnit.SECONDS.sleep(2);
             menuCleanFence(employee, fences);
         } else {
@@ -90,7 +95,7 @@ public class Menu {
     }
 
     public void menuFeedFence(Employee employee, ArrayList<Fence> fences) throws InterruptedException {
-        System.out.println("/------------ Nourrir un enclot ------------/");
+        System.out.println("/------------ Nourrir un enclos ------------/");
         showAllFences(fences);
         System.out.println("/--------------------------------------------/");
         System.out.print("Choix: ");
