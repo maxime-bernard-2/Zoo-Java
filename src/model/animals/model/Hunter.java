@@ -1,4 +1,4 @@
-package main.animals.model;
+package model.animals.model;
 
 public interface Hunter {
 

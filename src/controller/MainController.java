@@ -1,13 +1,13 @@
-package main;
+package controller;
 
-import main.animals.Pinguin;
-import main.animals.Whale;
-import main.animals.Wolf;
-import main.fences.Fence;
+import model.Employee;
+import model.Zoo;
+import model.animals.Wolf;
+import model.fences.Fence;
 
 import java.util.ArrayList;
 
-public class Main {
+public class MainController {
 
     public static void main(String[] args) throws InterruptedException {
 

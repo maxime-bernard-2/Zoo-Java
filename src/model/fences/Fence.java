@@ -1,9 +1,8 @@
-package main.fences;
+package model.fences;
 
-import main.animals.model.Animal;
+import model.animals.model.Animal;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Fence {
 

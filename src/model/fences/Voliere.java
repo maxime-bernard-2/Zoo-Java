@@ -1,8 +1,7 @@
-package main.fences;
+package model.fences;
 
-import main.animals.Pinguin;
-import main.animals.model.Animal;
-import main.animals.model.Bird;
+import model.animals.model.Animal;
+import model.animals.model.Bird;
 
 public class Voliere extends Fence {
 
