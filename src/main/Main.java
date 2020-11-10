@@ -7,6 +7,10 @@ import main.fences.Fence;
 
 import java.util.ArrayList;
 
+/**
+ * Classe publique Main
+ *
+ */
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {
