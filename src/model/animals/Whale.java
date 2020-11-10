@@ -1,8 +1,8 @@
-package main.animals;
+package model.animals;
 
-import main.animals.model.Animal;
-import main.animals.model.Aquatic;
-import main.animals.model.Mammal;
+import model.animals.model.Animal;
+import model.animals.model.Aquatic;
+import model.animals.model.Mammal;
 
 public class Whale extends Animal implements Mammal, Aquatic {
     public Whale(String name, boolean sex, double weight, double height, int age) {

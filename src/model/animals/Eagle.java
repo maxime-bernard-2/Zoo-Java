@@ -1,8 +1,8 @@
-package main.animals;
+package model.animals;
 
-import main.animals.model.Animal;
-import main.animals.model.Bird;
-import main.animals.model.Mammal;
+import model.animals.model.Animal;
+import model.animals.model.Bird;
+import model.animals.model.Mammal;
 
 public class Eagle extends Animal implements Mammal, Bird {
     public Eagle(String name, boolean sex, double weight, double height, int age) {
