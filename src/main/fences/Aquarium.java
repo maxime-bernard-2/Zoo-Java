@@ -4,13 +4,18 @@ import main.animals.model.Animal;
 import main.animals.model.Aquatic;
 import main.animals.model.Bird;
 
+/**
+ * Classe publique Aquarium qui étend la classe Fence
+ *
+ */
 public class Aquarium extends Fence {
 
-
+	//Attributes
     private int depth;
     private final int initialDepth;
     private int salinity;
 
+    //Constructor
     public Aquarium(String name, double area, int depth, int salinity, int maxAnimals) {
         super(name, area, maxAnimals);
         this.depth = depth;
@@ -18,6 +23,10 @@ public class Aquarium extends Fence {
         this.salinity = salinity;
     }
 
+    /**
+     * Methode <strong>addAnimal()</strong> permet d'ajouter des animaux
+     * @param animal
+     */
     @Override
     public void addAnimal(Animal animal) {
         if (animal instanceof Aquatic) {
@@ -25,6 +34,9 @@ public class Aquarium extends Fence {
         }
     }
 
+    /**
+     * Methode <strong>clean() </strong> permet de nettoyer l'aquarium
+     */
     @Override
     public void clean() {
         this.setCleanliness(1);
@@ -33,6 +45,7 @@ public class Aquarium extends Fence {
     }
 
 
+    //Getters and Setters
     public int getDepth() {
         return depth;
     }
