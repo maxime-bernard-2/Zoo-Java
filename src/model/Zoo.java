@@ -7,13 +7,19 @@ import model.fences.Voliere;
 
 import java.util.ArrayList;
 
+/**
+ * Classe publique Zoo
+ *
+ */
 public class Zoo {
 
+	//Attributes
     private String name;
     private Employee employee;
     private int maxFences;
     private ArrayList<Fence> fences;
 
+    //Constructor
     public Zoo(String name, Employee employee, int maxFences, ArrayList<Fence> fences) {
         this.name = name;
         this.employee = employee;
@@ -21,6 +27,10 @@ public class Zoo {
         this.fences = fences;
     }
 
+    /**
+     * Methode <strong>howManyAnimals()</strong> permet d'afficher le nombre d'animaux présents dans le zoo
+     * @return compt
+     */
     public int howManyAnimals() {
         int compt = 0;
         for (Fence fence: this.fences) {
@@ -31,6 +41,9 @@ public class Zoo {
         return compt;
     }
 
+    /**
+     * Methode <strong>showAnyAnimal()</strong> permet d'afficher les animaux de tous les enclos
+     */
     public void showAnyAnimal() {
         int compt = 0;
         for (Fence fence: this.fences) {
@@ -40,6 +53,9 @@ public class Zoo {
         }
     }
 
+    /**
+     * Methode <strong>randomChangeAnimal()</strong> permet modifier aléatoirement l’état de certains animaux (les rendre malades, les endormir, etc.)
+     */
     public void randomChangeAnimal() {
         for (Fence fence: this.fences) {
             for (Animal animal: fence.getAnimals()) {
@@ -59,6 +75,9 @@ public class Zoo {
         }
     }
 
+    /**
+     * Methode <strong>randomChangeFence()</strong> permet de modifier aléatoirement l’état de certains enclos (leur propreté, leur salinité, etc.)
+     */
     public void randomChangeFence() {
         for (Fence fence: this.fences) {
             // 10%
@@ -92,6 +111,9 @@ public class Zoo {
         }
     }
 
+    /**
+     * Methode <strong>launchMenu()</strong> permet de lancer le menu
+     */
     public void launchMenu() {
         Menu menu = new Menu();
         try {

@@ -7,6 +7,10 @@ import model.fences.Fence;
 
 import java.util.ArrayList;
 
+/**
+ * Classe publique MainController
+ *
+ */
 public class MainController {
 
     public static void main(String[] args) throws InterruptedException {
