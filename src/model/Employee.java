@@ -61,13 +61,8 @@ public class Employee {
      * @param animal
      */
     public void swapFence(Fence fenceToLeave, Fence fenceToGo, Animal animal) throws Exception {
-        try {
-            fenceToLeave.removeAnimal(animal);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        } finally {
-            fenceToGo.addAnimal(animal);
-        }
+        fenceToGo.addAnimal(animal);
+        fenceToLeave.removeAnimal(animal);
     }
 
 
