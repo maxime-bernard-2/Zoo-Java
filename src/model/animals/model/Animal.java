@@ -31,12 +31,12 @@ public abstract class Animal {
     /**
      * Methode <strong>eat()</strong> permet aux animaux de manger (lorsqu'ils ne dorment pas)
      */
-    public void eat() {
+    public String eat() throws Exception {
         if (this.conciousness) {
             this.hungry = 100;
-            System.out.println(this.name + " a bien mang� !");
+            return this.name + " a bien mangé !";
         } else {
-            System.out.println("Il faut reveiller " + this.name + " avant de le nourrir !");
+            return this.name + " n'a pas pu manger car il dort.";
         }
     }
 

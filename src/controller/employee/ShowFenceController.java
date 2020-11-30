@@ -32,6 +32,7 @@ public class ShowFenceController {
     public void addButton(Fence fence) {
         Button newButton = new Button(fence.getName());
         newButton.setOnAction(e -> {
+            Main.text = Main.employee.checkFence(fence);
             text.setText(Main.employee.checkFence(fence));
         });
         buttonContainer.getChildren().add(newButton);

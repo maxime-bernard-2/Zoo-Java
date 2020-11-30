@@ -14,22 +14,22 @@
             <Button mnemonicParsing="false" onAction="#returnToZoo" text="Retour" />
             <VBox alignment="TOP_CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#showFence" text="Examiner un enclos">
+                  <Button fx:id="showButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#showFence" text="Examiner un enclos">
                      <VBox.margin>
                         <Insets top="20.0" />
                      </VBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#cleanFence" text="Nettoyer un enclos">
+                  <Button fx:id="cleanButton" mnemonicParsing="false" onAction="#cleanFence" text="Nettoyer un enclos">
                      <VBox.margin>
                         <Insets top="20.0" />
                      </VBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#feedFence" text="Nourrir un enclos">
+                  <Button fx:id="feedButton" mnemonicParsing="false" onAction="#feedFence" text="Nourrir un enclos">
                      <VBox.margin>
                         <Insets top="20.0" />
                      </VBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#swapFence" text="Transferer un animal">
+                  <Button fx:id="swapButton" mnemonicParsing="false" onAction="#swapFence" text="Transferer un animal">
                      <VBox.margin>
                         <Insets top="20.0" />
                      </VBox.margin>

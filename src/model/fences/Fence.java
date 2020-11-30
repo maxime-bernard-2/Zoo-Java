@@ -28,7 +28,7 @@ public class Fence {
     }
 
     /**
-     * Methode <strong>toString()</strong> permet d'afficher les caractéristiques d'un enclos
+     * Methode <strong>toString()</strong> permet d'afficher les caractï¿½ristiques d'un enclos
      */
     @Override
     public String toString() {
@@ -70,14 +70,16 @@ public class Fence {
     /**
      * Methode <strong>feed()</strong> permet de nourrir les animaux
      */
-    public void feed() {
+    public String feed() throws Exception {
+        String returnBuffer = "";
         for (Animal animal: animals) {
-            animal.eat();
+            returnBuffer += animal.eat() + "\n";
         }
+        return  returnBuffer;
     }
 
     /**
-     * Methode <strong>clean()</strong> permet de donner la possibilité à un enclos d'être entretenu lorsqu'il est sale et vide
+     * Methode <strong>clean()</strong> permet de donner la possibilitï¿½ ï¿½ un enclos d'ï¿½tre entretenu lorsqu'il est sale et vide
      */
     public void clean() {
         this.cleanliness = 1;

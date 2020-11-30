@@ -32,19 +32,25 @@ public class FeedFenceController {
     public void addButton(Fence fence) {
         Button newButton = new Button(fence.getName());
         newButton.setOnAction(e -> {
-            Main.employee.feedFence(fence);
-
-            Parent choiceParent = null;
             try {
-                choiceParent = FXMLLoader.load(getClass().getResource("../../view/EmployeMenuView.fxml"));
-            } catch (IOException ioException) {
-                ioException.printStackTrace();
-            }
-            Scene choiceScene = new Scene(choiceParent);
+                Main.text = Main.employee.feedFence(fence);
 
-            Stage root = (Stage) ((Node)e.getSource()).getScene().getWindow();
-            root.setScene(choiceScene);
-            root.show();
+                Parent choiceParent = null;
+                try {
+                    choiceParent = FXMLLoader.load(getClass().getResource("../../view/EmployeMenuView.fxml"));
+                } catch (IOException ioException) {
+                    ioException.printStackTrace();
+                }
+                Scene choiceScene = new Scene(choiceParent);
+
+                Stage root = (Stage) ((Node)e.getSource()).getScene().getWindow();
+                root.setScene(choiceScene);
+                root.show();
+            } catch(Exception ex) {
+                text.setText(ex.getMessage());
+                Main.text = ex.getMessage();
+            }
+
         });
         buttonContainer.getChildren().add(newButton);
     }
