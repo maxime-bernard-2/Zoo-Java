@@ -34,7 +34,7 @@ public abstract class Animal {
     public void eat() {
         if (this.conciousness) {
             this.hungry = 100;
-            System.out.println(this.name + " a bien mangé !");
+            System.out.println(this.name + " a bien mangï¿½ !");
         } else {
             System.out.println("Il faut reveiller " + this.name + " avant de le nourrir !");
         }
@@ -48,14 +48,14 @@ public abstract class Animal {
     }
 
     /**
-     * Methode <strong>recover()</strong> permet aux animaux d'être soigné
+     * Methode <strong>recover()</strong> permet aux animaux d'ï¿½tre soignï¿½
      */
     public void recover() {
         this.health = 100;
     }
 
     /**
-     * Methode <strong>toggleConciousness()</strong> permet aux animaux de se réveiller ou s'endormir 
+     * Methode <strong>toggleConciousness()</strong> permet aux animaux de se rï¿½veiller ou s'endormir 
      */
     public void toggleConciousness() {
         if(this.conciousness) {
@@ -109,5 +109,17 @@ public abstract class Animal {
 
     public void setHealth(int health) {
         this.health = health;
+    }
+
+    @Override
+    public String toString() {
+
+        return "Nom: " + name + "\n" +
+                "    Sexe: " + sex + "\n" +
+                "    Poid: " + weight + "\n" +
+                "    Age: " + age + "\n" +
+                "    Faim: " + hungry + "%\n" +
+                "    Etat: " + (conciousness ? "Conscient": "Endormi") + "\n" +
+                "    Sante: " + health + "%\n";
     }
 }
