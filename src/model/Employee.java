@@ -22,22 +22,22 @@ public class Employee {
     }
 
     /**
-     * Methode <strong>checkFence()</strong> examiner un enclos (en affichant les caractéristiques de l’enclos ainsi que la liste des animaux)
+     * Methode <strong>checkFence()</strong> examiner un enclos (en affichant les caractï¿½ristiques de lï¿½enclos ainsi que la liste des animaux)
      * @param fence
      */
-    public void checkFence(Fence fence) {
-        System.out.println(fence.toString());
+    public String checkFence(Fence fence) {
+        return fence.toString();
     }
 
     /**
      * Methode <strong>cleanFence()</strong> permet de nettoyer un enclos
      * @param fence
      */
-    public void cleanFence(Fence fence) {
+    public void cleanFence(Fence fence) throws Exception {
         if (fence.getAnimals().size() == 0) {
             fence.clean();
         } else {
-            System.out.println("\nNettoyage impossible: l'enclos n'est pas vide");
+            throw new Exception("Nettoyage impossible: l'enclos n'est pas vide");
         }
     }
 
@@ -46,26 +46,23 @@ public class Employee {
      * @param fence
      */
     public void feedFence(Fence fence) {
+
         fence.feed();
     }
 
     /**
-     * Methode <strong>swapFence()</strong> permet de transférer un animal d'un enclos à un autre
+     * Methode <strong>swapFence()</strong> permet de transfï¿½rer un animal d'un enclos ï¿½ un autre
      * @param fenceToLeave
      * @param fenceToGo
      * @param animal
      */
-    public void swapFence(Fence fenceToLeave, Fence fenceToGo, Animal animal) {
+    public void swapFence(Fence fenceToLeave, Fence fenceToGo, Animal animal) throws Exception {
         try {
             fenceToLeave.removeAnimal(animal);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         } finally {
-            try {
-                fenceToGo.addAnimal(animal);
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
+            fenceToGo.addAnimal(animal);
         }
     }
 

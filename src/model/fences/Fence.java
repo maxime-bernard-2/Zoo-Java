@@ -24,7 +24,7 @@ public class Fence {
         this.area = area;
         this.maxAnimals = maxAnimals;
         this.animals = new ArrayList<Animal>(maxAnimals);
-        this.cleanliness = 1;
+        this.cleanliness = 0;
     }
 
     /**
@@ -32,13 +32,13 @@ public class Fence {
      */
     @Override
     public String toString() {
-        return "Fence{" +
-                "name='" + name + '\'' +
-                ", area=" + area +
-                ", maxAnimals=" + maxAnimals +
-                ", animals=" + animals +
-                ", cleanliness=" + cleanliness +
-                '}';
+
+        return "Nom de l'enclot: " + name + "\n" +
+               "Superficie de l'enclot: " + area + " m2\n" +
+               "Etat de l'enclot: " + (cleanliness == 0 ? "Sale": "Propre") + "\n" +
+               "Nombre max d'animaux: " + maxAnimals + "\n" +
+               "Animaux: \n" + animals.toString() + "\n";
+
     }
 
     /**
@@ -53,7 +53,7 @@ public class Fence {
      * Methode <strong>addAnimal()</strong> permet d'ajouter des animaux
      * @param animal
      */
-    public void addAnimal(Animal animal) {
+    public void addAnimal(Animal animal) throws Exception {
         if (animals.size() != maxAnimals) {
             if (!animals.isEmpty()) {
                 if (animal.getClass() == animals.get(0).getClass()) {
@@ -62,6 +62,8 @@ public class Fence {
             } else {
                 animals.add(animal);
             }
+        } else {
+            throw new Exception("L'enclos de destination est pleins");
         }
     }
 

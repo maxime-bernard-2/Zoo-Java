@@ -28,7 +28,7 @@ public class Zoo {
     }
 
     /**
-     * Methode <strong>howManyAnimals()</strong> permet d'afficher le nombre d'animaux présents dans le zoo
+     * Methode <strong>howManyAnimals()</strong> permet d'afficher le nombre d'animaux prï¿½sents dans le zoo
      * @return compt
      */
     public int howManyAnimals() {
@@ -44,17 +44,19 @@ public class Zoo {
     /**
      * Methode <strong>showAnyAnimal()</strong> permet d'afficher les animaux de tous les enclos
      */
-    public void showAnyAnimal() {
-        int compt = 0;
+    public String showAnyAnimal() {
+        String animaux = new String("");
         for (Fence fence: this.fences) {
             for (Animal animal: fence.getAnimals()) {
-                System.out.println(animal.toString());
+                animaux += animal.toString();
             }
         }
+
+        return animaux;
     }
 
     /**
-     * Methode <strong>randomChangeAnimal()</strong> permet modifier aléatoirement l’état de certains animaux (les rendre malades, les endormir, etc.)
+     * Methode <strong>randomChangeAnimal()</strong> permet modifier alï¿½atoirement lï¿½ï¿½tat de certains animaux (les rendre malades, les endormir, etc.)
      */
     public void randomChangeAnimal() {
         for (Fence fence: this.fences) {
@@ -76,7 +78,7 @@ public class Zoo {
     }
 
     /**
-     * Methode <strong>randomChangeFence()</strong> permet de modifier aléatoirement l’état de certains enclos (leur propreté, leur salinité, etc.)
+     * Methode <strong>randomChangeFence()</strong> permet de modifier alï¿½atoirement lï¿½ï¿½tat de certains enclos (leur propretï¿½, leur salinitï¿½, etc.)
      */
     public void randomChangeFence() {
         for (Fence fence: this.fences) {
@@ -109,19 +111,6 @@ public class Zoo {
                 }
             }
         }
-    }
-
-    /**
-     * Methode <strong>launchMenu()</strong> permet de lancer le menu
-     */
-    public void launchMenu() {
-        Menu menu = new Menu();
-        try {
-            menu.employeeMenu(this.employee, this.fences);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-
     }
 
 }
