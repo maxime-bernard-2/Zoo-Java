@@ -54,10 +54,14 @@ public class Fence {
      * @param animal
      */
     public void addAnimal(Animal animal) throws Exception {
-        if (animals.size() != maxAnimals) {
+        if (animals.size() < maxAnimals) {
             if (!animals.isEmpty()) {
                 if (animal.getClass() == animals.get(0).getClass()) {
                     animals.add(animal);
+                } else {
+                    throw new Exception("L'animal que vous tentez d'ajouter a cet enclot " +
+                                        "n'est pas compatible avec les animaux déjà présents: " +
+                                        animals.get(0).getClass().getSimpleName() );
                 }
             } else {
                 animals.add(animal);
