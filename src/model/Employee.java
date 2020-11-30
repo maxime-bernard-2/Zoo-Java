@@ -45,9 +45,13 @@ public class Employee {
      * Methode <strong>feedFence()</strong> permet de nourrir les animaux d'un enclos
      * @param fence
      */
-    public void feedFence(Fence fence) {
+    public String feedFence(Fence fence) throws Exception {
+        if (fence.getAnimals().size() > 0) {
+            return fence.feed();
+        } else {
+            throw new Exception("Il n'y a pas d'annimaux dans cet enclos.");
+        }
 
-        fence.feed();
     }
 
     /**

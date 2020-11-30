@@ -22,6 +22,13 @@ public class Main extends Application {
     public static ArrayList<Fence> fences = new ArrayList<Fence>();
     public static Zoo zoo = new Zoo("Mon zoo", employee, 1, fences);
 
+    public static int turnNumber = 1;
+    public static int maxActionPoint = 3;
+    public static int actualActionPoint = maxActionPoint;
+    public static String text = new String("");
+
+
+
     public static void main(String[] args) {
         launch(args);
     }
@@ -30,15 +37,11 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
 
         for (int i = 0; i < 4; i++) {
-            fence.addAnimal(new Wolf("wolfy" + i, true, 50, 50, 10));
+            fence.addAnimal(new Wolf("Wolfy_" + i, true, 50, 50, 10));
         }
 
         for (int i = 0; i < 1; i++) {
-            fence.addAnimal(new Bear("bear" + i, true, 50, 50, 10));
-        }
-
-        for (int i = 0; i < 2; i++) {
-            fence.addAnimal(new Tiger("tigre" + i, true, 50, 50, 10));
+            fence2.addAnimal(new Bear("Kuma_" + i, true, 100, 70, 5));
         }
 
         fences.add(fence);

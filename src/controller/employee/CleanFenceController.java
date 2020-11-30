@@ -35,6 +35,7 @@ public class CleanFenceController {
 
             try {
                 Main.employee.cleanFence(fence);
+                Main.text = fence.getName() + " est tout propre !";
 
                 Parent choiceParent = null;
                 try {
@@ -49,8 +50,8 @@ public class CleanFenceController {
                 root.show();
 
             } catch (Exception ex) {
-                System.out.println();
                 text.setText(ex.getMessage());
+                Main.text = ex.getMessage();
             }
 
         });
