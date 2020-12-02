@@ -3,6 +3,7 @@ package model;
 import model.animals.model.Animal;
 import model.fences.Aquarium;
 import model.fences.Fence;
+import model.fences.PinguinFence;
 import model.fences.Voliere;
 
 import java.util.ArrayList;
@@ -28,7 +29,7 @@ public class Zoo {
     }
 
     /**
-     * Methode <strong>howManyAnimals()</strong> permet d'afficher le nombre d'animaux pr�sents dans le zoo
+     * Methode <strong>howManyAnimals()</strong> permet d'afficher le nombre d'animaux presents dans le zoo
      * @return compt
      */
     public int howManyAnimals() {
@@ -43,6 +44,7 @@ public class Zoo {
 
     /**
      * Methode <strong>showAnyAnimal()</strong> permet d'afficher les animaux de tous les enclos
+     * @see Animal#toString()
      */
     public String showAnyAnimal() {
         String animaux = new String("");
@@ -56,7 +58,8 @@ public class Zoo {
     }
 
     /**
-     * Methode <strong>randomChangeAnimal()</strong> permet modifier al�atoirement l��tat de certains animaux (les rendre malades, les endormir, etc.)
+     * Methode <strong>randomChangeAnimal()</strong> permet modifier aleatoirement l etat de certains animaux (les rendre malades, les endormir, etc.)
+     * @see Animal#toggleConsciousness()
      */
     public void randomChangeAnimal() {
         for (Fence fence: this.fences) {
@@ -67,7 +70,7 @@ public class Zoo {
                 }
                 // 50%
                 if ((int)((Math.random() * 100)) > 50) {
-                    animal.toggleConciousness();
+                    animal.toggleConsciousness();
                 }
                 // 20%
                 if ((int)((Math.random() * 100)) > 80) {
@@ -78,7 +81,7 @@ public class Zoo {
     }
 
     /**
-     * Methode <strong>randomChangeFence()</strong> permet de modifier al�atoirement l��tat de certains enclos (leur propret�, leur salinit�, etc.)
+     * Methode <strong>randomChangeFence()</strong> permet de modifier aleatoirement l etat de certains enclos (leur proprete, leur salinite, etc.)
      */
     public void randomChangeFence() {
         for (Fence fence: this.fences) {
@@ -107,6 +110,18 @@ public class Zoo {
                 if ((int)((Math.random() * 100)) > 90) {
                     if (((Voliere) fence).isRoofState()) {
                         ((Voliere) fence).setRoofState(false);
+                    }
+                }
+            }
+
+            if (fence instanceof PinguinFence) {
+                // 10%
+                if ((int)((Math.random() * 100)) > 90) {
+                    if (((PinguinFence) fence).isRoofState()) {
+                        ((PinguinFence) fence).setRoofState(false);
+                    }
+                    if (((PinguinFence) fence).getDepth() > 0) {
+                        ((PinguinFence) fence).setDepth(((PinguinFence) fence).getDepth() - 1);
                     }
                 }
             }

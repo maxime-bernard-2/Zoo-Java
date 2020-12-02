@@ -32,7 +32,7 @@ public class PinguinFence extends Fence {
     }
 
     /**
-     * Methode <strong>addAnimal()</strong> permet d'ajouter des animaux dans l'enclos
+     * Methode <strong>addAnimal()</strong> permet d'ajouter des pingouins dans l'enclos
      */
     @Override
     public void addAnimal(Animal animal) throws Exception {

@@ -12,6 +12,10 @@ import model.Main;
 
 import java.io.IOException;
 
+/**
+ * Classe ZooMenuController
+ */
+
 public class ZooMenuController {
 
     public TextArea text = null;

@@ -5,7 +5,7 @@ import model.animals.model.Hunter;
 import model.animals.model.Mammal;
 
 /**
- * Classe publique Tiger qui étend la classe abstraite Animal et implémente les interfaces Mammal et Hunter
+ * Classe publique Tiger qui etend la classe abstraite Animal et implemente les interfaces Mammal et Hunter
  *
  */
 public class Tiger extends Animal implements Mammal, Hunter{

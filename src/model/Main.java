@@ -13,6 +13,9 @@ import model.fences.Voliere;
 
 import java.util.ArrayList;
 
+/**
+ * Classe publique Main
+ */
 
 public class Main extends Application {
 

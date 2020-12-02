@@ -13,6 +13,10 @@ import model.fences.Fence;
 
 import java.io.IOException;
 
+/**
+ * Classe EmployeMenuController
+ */
+
 public class EmployeMenuController {
 
     public TextArea text = null;
