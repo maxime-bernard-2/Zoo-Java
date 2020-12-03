@@ -13,7 +13,7 @@ public abstract class Animal {
     private double height;
     private int age;
     private int hungry;
-    private boolean conciousness;
+    private boolean consciousness;
     private int health;
 
     //Constructor
@@ -24,7 +24,7 @@ public abstract class Animal {
         this.height = height;
         this.age = age;
         this.hungry = 100;
-        this.conciousness = true;
+        this.consciousness = true;
         this.health = 100;
     }
 
@@ -32,7 +32,7 @@ public abstract class Animal {
      * Methode <strong>eat()</strong> permet aux animaux de manger (lorsqu'ils ne dorment pas)
      */
     public String eat() throws Exception {
-        if (this.conciousness) {
+        if (this.consciousness) {
             this.hungry = 100;
             return this.name + " a bien mangé !";
         } else {
@@ -48,20 +48,20 @@ public abstract class Animal {
     }
 
     /**
-     * Methode <strong>recover()</strong> permet aux animaux d'�tre soign�
+     * Methode <strong>recover()</strong> permet aux animaux d'etre soigne
      */
     public void recover() {
         this.health = 100;
     }
 
     /**
-     * Methode <strong>toggleConciousness()</strong> permet aux animaux de se r�veiller ou s'endormir 
+     * Methode <strong>toggleConsciousness()</strong> permet aux animaux de se reveiller ou s'endormir
      */
-    public void toggleConciousness() {
-        if(this.conciousness) {
-            this.conciousness = false;
+    public void toggleConsciousness() {
+        if(this.consciousness) {
+            this.consciousness = false;
         } else {
-            this.conciousness = true;
+            this.consciousness = true;
         }
     }
 
@@ -91,8 +91,8 @@ public abstract class Animal {
         return hungry;
     }
 
-    public boolean isConciousness() {
-        return conciousness;
+    public boolean isConsciousness() {
+        return consciousness;
     }
 
     public int getHealth() {
@@ -103,15 +103,19 @@ public abstract class Animal {
         this.hungry = hungry;
     }
 
-    public void setConciousness(boolean conciousness) {
-        this.conciousness = conciousness;
+    public void setConsciousness(boolean consciousness) {
+        this.consciousness = consciousness;
     }
 
     public void setHealth(int health) {
         this.health = health;
     }
 
+
     @Override
+    /**
+     * Methode <strong>toString()</strong> qui renvoie un animal et ses caracteristiques
+     */
     public String toString() {
 
         return "Nom: " + name + "\n" +
@@ -119,7 +123,7 @@ public abstract class Animal {
                 "    Poid: " + weight + "\n" +
                 "    Age: " + age + "\n" +
                 "    Faim: " + hungry + "%\n" +
-                "    Etat: " + (conciousness ? "Conscient": "Endormi") + "\n" +
+                "    Etat: " + (consciousness ? "Conscient": "Endormi") + "\n" +
                 "    Sante: " + health + "%\n";
     }
 }

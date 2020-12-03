@@ -28,14 +28,14 @@ public class Fence {
     }
 
     /**
-     * Methode <strong>toString()</strong> permet d'afficher les caract�ristiques d'un enclos
+     * Methode <strong>toString()</strong> permet d'afficher les caracteristiques d'un enclos
      */
     @Override
     public String toString() {
 
-        return "Nom de l'enclot: " + name + "\n" +
-               "Superficie de l'enclot: " + area + " m2\n" +
-               "Etat de l'enclot: " + (cleanliness == 0 ? "Sale": "Propre") + "\n" +
+        return "Nom de l'enclos: " + name + "\n" +
+               "Superficie de l'enclos: " + area + " m2\n" +
+               "Etat de l'enclos: " + (cleanliness == 0 ? "Sale": "Propre") + "\n" +
                "Nombre max d'animaux: " + maxAnimals + "\n" +
                "Animaux: \n" + animals.toString() + "\n";
 
@@ -43,7 +43,7 @@ public class Fence {
 
     /**
      * Methode <strong>removeAnimal()</strong> permet de retirer des animaux
-     * @param animal
+     * @param animal - animal
      */
     public void removeAnimal(Animal animal) {
         animals.remove(animal);
@@ -51,7 +51,7 @@ public class Fence {
 
     /**
      * Methode <strong>addAnimal()</strong> permet d'ajouter des animaux
-     * @param animal
+     * @param animal - animal
      */
     public void addAnimal(Animal animal) throws Exception {
         if (animals.size() < maxAnimals) {
@@ -59,7 +59,7 @@ public class Fence {
                 if (animal.getClass() == animals.get(0).getClass()) {
                     animals.add(animal);
                 } else {
-                    throw new Exception("L'animal que vous tentez d'ajouter a cet enclot " +
+                    throw new Exception("L'animal que vous tentez d'ajouter a cet enclos " +
                                         "n'est pas compatible avec les animaux déjà présents: " +
                                         animals.get(0).getClass().getSimpleName() );
                 }
@@ -67,7 +67,7 @@ public class Fence {
                 animals.add(animal);
             }
         } else {
-            throw new Exception("L'enclos de destination est pleins");
+            throw new Exception("L'enclos de destination est plein");
         }
     }
 
@@ -83,7 +83,7 @@ public class Fence {
     }
 
     /**
-     * Methode <strong>clean()</strong> permet de donner la possibilit� � un enclos d'�tre entretenu lorsqu'il est sale et vide
+     * Methode <strong>clean()</strong> permet de donner la possibilite a un enclos d'etre entretenu lorsqu'il est sale et vide
      */
     public void clean() {
         this.cleanliness = 1;

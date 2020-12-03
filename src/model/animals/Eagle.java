@@ -5,7 +5,7 @@ import model.animals.model.Bird;
 import model.animals.model.Mammal;
 
 /**
- * Classe publique Eagle qui étend la classe abstraite Animal et implémente les interfaces Mammal et Bird
+ * Classe publique Eagle qui etend la classe abstraite Animal et implemente les interfaces Mammal et Bird
  *
  */
 public class Eagle extends Animal implements Mammal, Bird {

@@ -4,7 +4,7 @@ import model.animals.model.Animal;
 import model.animals.model.Aquatic;
 
 /**
- * Classe publique Aquarium qui �tend la classe Fence
+ * Classe publique Aquarium qui etend la classe Fence
  *
  */
 public class Aquarium extends Fence {
@@ -24,7 +24,8 @@ public class Aquarium extends Fence {
 
     /**
      * Methode <strong>addAnimal()</strong> permet d'ajouter des animaux
-     * @param animal
+     * @param animal - animal
+     * @see Fence#addAnimal(Animal) 
      */
     @Override
     public void addAnimal(Animal animal) throws Exception {

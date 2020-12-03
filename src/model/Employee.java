@@ -22,8 +22,8 @@ public class Employee {
     }
 
     /**
-     * Methode <strong>checkFence()</strong> examiner un enclos (en affichant les caract�ristiques de l�enclos ainsi que la liste des animaux)
-     * @param fence
+     * Methode <strong>checkFence()</strong> examiner un enclos (en affichant les caracteristiques de l enclos ainsi que la liste des animaux)
+     * @param fence - enclos
      */
     public String checkFence(Fence fence) {
         return fence.toString();
@@ -31,7 +31,8 @@ public class Employee {
 
     /**
      * Methode <strong>cleanFence()</strong> permet de nettoyer un enclos
-     * @param fence
+     * @param fence - enclos
+     * @see Fence#clean()
      */
     public void cleanFence(Fence fence) throws Exception {
         if (fence.getAnimals().size() == 0) {
@@ -43,22 +44,23 @@ public class Employee {
 
     /**
      * Methode <strong>feedFence()</strong> permet de nourrir les animaux d'un enclos
-     * @param fence
+     * @param fence - enclos
+     * @see Fence#feed()
      */
     public String feedFence(Fence fence) throws Exception {
         if (fence.getAnimals().size() > 0) {
             return fence.feed();
         } else {
-            throw new Exception("Il n'y a pas d'annimaux dans cet enclos.");
+            throw new Exception("Il n'y a pas d'animaux dans cet enclos.");
         }
 
     }
 
     /**
-     * Methode <strong>swapFence()</strong> permet de transf�rer un animal d'un enclos � un autre
-     * @param fenceToLeave
-     * @param fenceToGo
-     * @param animal
+     * Methode <strong>swapFence()</strong> permet de transferer un animal d'un enclos a un autre
+     * @param fenceToLeave - enleve animal
+     * @param fenceToGo - ajoute animal
+     * @param animal - animal
      */
     public void swapFence(Fence fenceToLeave, Fence fenceToGo, Animal animal) throws Exception {
         fenceToGo.addAnimal(animal);

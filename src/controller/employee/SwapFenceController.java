@@ -17,6 +17,10 @@ import model.fences.Fence;
 
 import java.io.IOException;
 
+/**
+ * Classe SwapFenceController
+ */
+
 public class SwapFenceController {
 
     @FXML

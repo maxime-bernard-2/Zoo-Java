@@ -4,7 +4,7 @@ import model.animals.model.Animal;
 import model.animals.model.Mammal;
 
 /**
- * Classe publique Bear qui étend la classe abstraite Animal et implémente l'interface Mammal
+ * Classe publique Bear qui etend la classe abstraite Animal et implemente l'interface Mammal
  *
  */
 public class Bear extends Animal implements Mammal {

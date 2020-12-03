@@ -4,7 +4,7 @@ import model.animals.model.Animal;
 import model.animals.model.Bird;
 
 /**
- * Classe publique Voliere qui �tend la classe Fence
+ * Classe publique Voliere qui etend la classe Fence
  *
  */
 public class Voliere extends Fence {
@@ -21,7 +21,7 @@ public class Voliere extends Fence {
     }
 
     /**
-     * Methode <strong>addAnimal()</strong> permet d'ajouter des animaux dans la voli�re
+     * Methode <strong>addAnimal()</strong> permet d'ajouter des animaux dans la voliere
      */
     @Override
     public void addAnimal(Animal animal) throws Exception {
@@ -31,7 +31,7 @@ public class Voliere extends Fence {
     }
 
     /**
-     * Methode <strong>clean()</strong> permet de nettoyer la voli�re
+     * Methode <strong>clean()</strong> permet de nettoyer la voliere
      */
     @Override
     public void clean() {

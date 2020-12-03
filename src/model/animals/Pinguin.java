@@ -3,7 +3,7 @@ package model.animals;
 import model.animals.model.*;
 
 /**
- * Classe publique Pinguin qui étend la classe abstraite Animal et implémente les interfaces Mammal, Aquatic et Bird
+ * Classe publique Pinguin qui etend la classe abstraite Animal et implemente les interfaces Mammal, Aquatic et Bird
  *
  */
 public class Pinguin extends Animal implements Mammal, Bird, Aquatic {

@@ -8,10 +8,14 @@ import javafx.stage.Stage;
 import model.animals.*;
 import model.fences.Aquarium;
 import model.fences.Fence;
+import model.fences.PinguinFence;
 import model.fences.Voliere;
 
 import java.util.ArrayList;
 
+/**
+ * Classe publique Main
+ */
 
 public class Main extends Application {
 
@@ -19,10 +23,11 @@ public class Main extends Application {
     public static Fence fenceSouth = new Fence("Enclos Sud", 300, 10); // Enclos Loup
     public static Fence fenceNord = new Fence("Enclos Nord", 100, 2); // Enclos Ours
     public static Fence fenceEast = new Fence("Enclos Est", 200, 3); // Enclos Tigre
-    public static Aquarium whideAquarium = new Aquarium("Grand Aquarium", 1000, 100,10, 2 ); // Aquarium Baleine
+    public static Aquarium wideAquarium = new Aquarium("Grand Aquarium", 1000, 100,10, 2 ); // Aquarium Baleine
     public static Aquarium mediumAquarium = new Aquarium("Aquarium Moyen", 500, 10,7, 3 ); // Aquarium Requins
     public static Aquarium smallAquarium = new Aquarium("Petit Aquarium", 10, 2,1, 30 ); // Aquarium Poissons Rouges
-    public static Voliere whideVoliere = new Voliere("Grande Voliere", 100, 25,5); // Voliere Aigle
+    public static Voliere wideVoliere = new Voliere("Grande Voliere", 100, 25,5); // Voliere Aigle
+    public static PinguinFence widePinguinFence = new PinguinFence("Grand Enclos de pingouins", 300, 30, 15, 5, 20 );
     public static ArrayList<Fence> fences = new ArrayList<Fence>();
     public static Zoo zoo = new Zoo("Mon zoo", employee, 1, fences);
 
@@ -56,9 +61,9 @@ public class Main extends Application {
         fences.add(fenceEast);
 
         for (int i = 0; i < 1; i++) {
-            whideAquarium.addAnimal(new Whale("Wamer_" + i, false, 1000, 5000, 4));
+            wideAquarium.addAnimal(new Whale("Wamer_" + i, false, 1000, 5000, 4));
         }
-        fences.add(whideAquarium);
+        fences.add(wideAquarium);
 
         for (int i = 0; i < 1; i++) {
             mediumAquarium.addAnimal(new Shark("Sharkou_" + i, true, 50, 100, 7));
@@ -71,9 +76,14 @@ public class Main extends Application {
         fences.add(smallAquarium);
 
         for (int i = 0; i < 4; i++) {
-            whideVoliere.addAnimal(new Eagle("Piaf_" + i, true, 10, 30, 1));
+            wideVoliere.addAnimal(new Eagle("Piaf_" + i, true, 10, 30, 1));
         }
-        fences.add(whideVoliere);
+        fences.add(wideVoliere);
+
+        for (int i = 0; i < 4; i++) {
+            widePinguinFence.addAnimal(new Pinguin("Pingouin_" + i, true, 10, 30, 1));
+        }
+        fences.add(widePinguinFence);
 
         primaryStage.setTitle("Mon ZOO");
         Parent root = FXMLLoader.load(getClass().getResource("../view/ZooMenuView.fxml"));

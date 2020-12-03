@@ -18,7 +18,7 @@
                         <Insets top="10.0" />
                      </VBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#showAnimals" text="Afficher tout les animaux">
+                  <Button mnemonicParsing="false" onAction="#showAnimals" text="Afficher tous les animaux">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>

@@ -16,6 +16,10 @@ import model.fences.Fence;
 
 import java.io.IOException;
 
+/**
+ * Classe FeedFenceController
+ */
+
 public class FeedFenceController {
 
     @FXML

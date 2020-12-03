@@ -5,7 +5,7 @@ import model.animals.model.Aquatic;
 import model.animals.model.Other;
 
 /**
- * Classe publique Redfish qui étend la classe abstraite Animal et implémente les interfaces Aquatic et Other
+ * Classe publique Redfish qui etend la classe abstraite Animal et implemente les interfaces Aquatic et Other
  *
  */
 public class RedFish extends Animal implements Other, Aquatic {
