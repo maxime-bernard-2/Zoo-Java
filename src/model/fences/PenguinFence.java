@@ -1,6 +1,5 @@
 package model.fences;
 
-import model.animals.Pinguin;
 import model.animals.model.Animal;
 
 
@@ -9,7 +8,7 @@ import model.animals.model.Animal;
  *
  */
 
-public class PinguinFence extends Fence {
+public class PenguinFence extends Fence {
 
     //Attributes
     private int cleanliness;
@@ -23,7 +22,7 @@ public class PinguinFence extends Fence {
     //Constructor
 
 
-    public PinguinFence(String name, double area, int maxAnimals, int depth, int salinity, int height) {
+    public PenguinFence(String name, double area, int maxAnimals, int depth, int salinity, int height) {
         super(name, area, maxAnimals);
         this.depth = depth;
         this.initialDepth = depth;
@@ -32,12 +31,24 @@ public class PinguinFence extends Fence {
     }
 
     /**
-     * Methode <strong>addAnimal()</strong> permet d'ajouter des pingouins dans l'enclos
+     * Methode <strong>addAnimal()</strong> permet d'ajouter des animaux dans l'enclos
      */
     @Override
     public void addAnimal(Animal animal) throws Exception {
-        if (animal instanceof Pinguin) {
-            super.addAnimal(animal);
+        if (this.getAnimals().size() < this.getMaxAnimals()) {
+            if (!this.getAnimals().isEmpty()) {
+                if (animal.getClass() == this.getAnimals().get(0).getClass()) {
+                    this.getAnimals().add(animal);
+                } else {
+                    throw new Exception("L'animal que vous tentez d'ajouter a cet enclos " +
+                            "n'est pas compatible avec les animaux deja presents: " +
+                            this.getAnimals().get(0).getClass().getSimpleName() );
+                }
+            } else {
+                this.getAnimals().add(animal);
+            }
+        } else {
+            throw new Exception("L'enclos de destination est plein");
         }
     }
 

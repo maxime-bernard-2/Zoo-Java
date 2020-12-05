@@ -6,6 +6,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 import model.Main;
@@ -23,16 +24,20 @@ public class EmployeMenuController {
     public Button showButton;
     public Button cleanButton;
     public Button feedButton;
+    public Button recoverButton;
     public Button swapButton;
+    public Label labelDay;
 
     public void initialize() {
 
         text.setText(Main.text);
+        labelDay.setText("Jour " + Main.turnNumber + "             Points d'action restant: " + Main.actualActionPoint);
 
         if (Main.actualActionPoint == 0) {
             showButton.setDisable(true);
             cleanButton.setDisable(true);
             feedButton.setDisable(true);
+            recoverButton.setDisable(true);
             swapButton.setDisable(true);
         }
 
@@ -61,6 +66,16 @@ public class EmployeMenuController {
     public void feedFence(ActionEvent actionEvent) throws IOException {
         Main.actualActionPoint--;
         Parent choiceParent = FXMLLoader.load(getClass().getResource("../view/employee/FeedFenceView.fxml"));
+        Scene choiceScene = new Scene(choiceParent);
+
+        Stage root = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
+        root.setScene(choiceScene);
+        root.show();
+    }
+
+    public void recoverFence(ActionEvent actionEvent) throws IOException {
+        Main.actualActionPoint--;
+        Parent choiceParent = FXMLLoader.load(getClass().getResource("../view/employee/RecoverFenceView.fxml"));
         Scene choiceScene = new Scene(choiceParent);
 
         Stage root = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();

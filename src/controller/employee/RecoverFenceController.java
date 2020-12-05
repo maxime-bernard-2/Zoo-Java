@@ -21,7 +21,7 @@ import java.io.IOException;
  * Classe FeedFenceController
  */
 
-public class FeedFenceController {
+public class RecoverFenceController {
 
     public Label labelDay;
     @FXML
@@ -40,7 +40,7 @@ public class FeedFenceController {
         Button newButton = new Button(fence.getName());
         newButton.setOnAction(e -> {
             try {
-                Main.text = Main.employee.feedFence(fence);
+                Main.text = Main.employee.recoverFence(fence);
 
                 Parent choiceParent = null;
                 try {

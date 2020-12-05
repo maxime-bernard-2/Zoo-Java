@@ -3,7 +3,6 @@ package model;
 import model.animals.model.Animal;
 import model.fences.Aquarium;
 import model.fences.Fence;
-import model.fences.PinguinFence;
 import model.fences.Voliere;
 
 import java.util.ArrayList;
@@ -110,18 +109,6 @@ public class Zoo {
                 if ((int)((Math.random() * 100)) > 90) {
                     if (((Voliere) fence).isRoofState()) {
                         ((Voliere) fence).setRoofState(false);
-                    }
-                }
-            }
-
-            if (fence instanceof PinguinFence) {
-                // 10%
-                if ((int)((Math.random() * 100)) > 90) {
-                    if (((PinguinFence) fence).isRoofState()) {
-                        ((PinguinFence) fence).setRoofState(false);
-                    }
-                    if (((PinguinFence) fence).getDepth() > 0) {
-                        ((PinguinFence) fence).setDepth(((PinguinFence) fence).getDepth() - 1);
                     }
                 }
             }

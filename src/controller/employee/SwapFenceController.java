@@ -8,6 +8,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -16,6 +17,7 @@ import model.animals.model.Animal;
 import model.fences.Fence;
 
 import java.io.IOException;
+import java.util.Arrays;
 
 /**
  * Classe SwapFenceController
@@ -23,6 +25,7 @@ import java.io.IOException;
 
 public class SwapFenceController {
 
+    public Label labelDay;
     @FXML
     private VBox buttonContainer;
     @FXML
@@ -33,6 +36,7 @@ public class SwapFenceController {
     private Fence fenceToGo;
 
     public void initialize() {
+        labelDay.setText("Jour " + Main.turnNumber + "             Points d'action restant: " + Main.actualActionPoint);
         for (Fence fence: Main.fences) {
             addFenceButton(fence);
         }
