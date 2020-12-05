@@ -53,7 +53,14 @@ public class Employee {
         } else {
             throw new Exception("Il n'y a pas d'animaux dans cet enclos.");
         }
+    }
 
+    public String recoverFence(Fence fence) throws Exception {
+        if (fence.getAnimals().size() > 0) {
+            return fence.recover();
+        } else {
+            throw new Exception("Il n'y a pas d'animaux dans cet enclos.");
+        }
     }
 
     /**

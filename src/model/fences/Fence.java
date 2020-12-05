@@ -97,6 +97,14 @@ public class Fence {
         return  returnBuffer;
     }
 
+    public String recover() throws Exception {
+        String returnBuffer = "";
+        for (Animal animal: animals) {
+            returnBuffer += animal.recover() + "\n";
+        }
+        return  returnBuffer;
+    }
+
     /**
      * Methode <strong>clean()</strong> permet de donner la possibilite a un enclos d'etre entretenu lorsqu'il est sale et vide
      */

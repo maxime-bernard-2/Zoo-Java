@@ -9,7 +9,7 @@
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
             <Button fx:id="cancel" mnemonicParsing="false" onAction="#returnMenu" text="Retour au menu" />
-            <VBox fx:id="buttonContainer" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" spacing="10.0">
+            <VBox fx:id="buttonContainer" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" spacing="8.0">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
@@ -20,7 +20,7 @@
    <top>
       <Label fx:id="labelDay" text="Jour 1             Points d'action restant: 10" BorderPane.alignment="TOP_LEFT">
          <BorderPane.margin>
-            <Insets left="10.0" />
+            <Insets left="8.0" />
          </BorderPane.margin>
       </Label>
    </top>

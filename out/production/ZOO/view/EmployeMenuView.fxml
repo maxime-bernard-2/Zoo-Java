@@ -29,6 +29,11 @@
                         <Insets top="20.0" />
                      </VBox.margin>
                   </Button>
+                  <Button fx:id="recoverButton" mnemonicParsing="false" onAction="#recoverFence" text="Soigner un enclos">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Button>
                   <Button fx:id="swapButton" mnemonicParsing="false" onAction="#swapFence" text="Transferer un animal">
                      <VBox.margin>
                         <Insets top="20.0" />

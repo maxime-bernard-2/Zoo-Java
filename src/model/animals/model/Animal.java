@@ -31,7 +31,7 @@ public abstract class Animal {
     /**
      * Methode <strong>eat()</strong> permet aux animaux de manger (lorsqu'ils ne dorment pas)
      */
-    public String eat() throws Exception {
+    public String eat() {
         if (this.consciousness) {
             this.hungry = 100;
             return this.name + " a bien mange !";
@@ -50,8 +50,9 @@ public abstract class Animal {
     /**
      * Methode <strong>recover()</strong> permet aux animaux d'etre soigne
      */
-    public void recover() {
+    public String recover() {
         this.health = 100;
+        return this.name + " a ete soigne !";
     }
 
     /**
