@@ -17,6 +17,13 @@
          </children>
       </HBox>
    </center>
+   <top>
+      <Label fx:id="labelDay" text="Jour 1             Points d'action restant: 10" BorderPane.alignment="TOP_LEFT">
+         <BorderPane.margin>
+            <Insets left="10.0" />
+         </BorderPane.margin>
+      </Label>
+   </top>
    <bottom>
       <TextArea fx:id="text" editable="false" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
    </bottom>

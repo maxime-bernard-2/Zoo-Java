@@ -22,6 +22,7 @@ public class ZooMenuController {
     public Label labelDay;
 
     public void initialize() {
+        labelDay.setText("Jour " + Main.turnNumber + "             Points d'action restant: " + Main.actualActionPoint);
         text.setText(Main.text);
     }
 
@@ -68,7 +69,7 @@ public class ZooMenuController {
         Main.actualActionPoint = Main.maxActionPoint;
         text.clear();
         Main.text = "";
-        labelDay.setText("Jour " + Main.turnNumber);
+        labelDay.setText("Jour " + Main.turnNumber + "             Points d'action restant: " + Main.actualActionPoint);
         Main.zoo.randomChangeAnimal();
         Main.zoo.randomChangeFence();
     }

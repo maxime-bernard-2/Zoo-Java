@@ -37,7 +37,7 @@ public class Main extends Application {
     public static Zoo zoo = new Zoo("Mon zoo", employee, 1, fences);
 
     public static int turnNumber = 1;
-    public static int maxActionPoint = 999;
+    public static int maxActionPoint = 10;
     public static int actualActionPoint = maxActionPoint;
     public static String text = new String("");
 

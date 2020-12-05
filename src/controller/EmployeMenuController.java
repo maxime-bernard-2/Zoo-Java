@@ -6,6 +6,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 import model.Main;
@@ -24,10 +25,12 @@ public class EmployeMenuController {
     public Button cleanButton;
     public Button feedButton;
     public Button swapButton;
+    public Label labelDay;
 
     public void initialize() {
 
         text.setText(Main.text);
+        labelDay.setText("Jour " + Main.turnNumber + "             Points d'action restant: " + Main.actualActionPoint);
 
         if (Main.actualActionPoint == 0) {
             showButton.setDisable(true);

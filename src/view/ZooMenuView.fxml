@@ -42,7 +42,7 @@
       </HBox>
    </center>
    <top>
-      <Label fx:id="labelDay" text="Jour 1" BorderPane.alignment="TOP_LEFT">
+      <Label fx:id="labelDay" text="Jour 1             Points d'action restant: 10" BorderPane.alignment="TOP_LEFT">
          <BorderPane.margin>
             <Insets left="10.0" />
          </BorderPane.margin>
