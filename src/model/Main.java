@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 import model.animals.*;
 import model.fences.Aquarium;
 import model.fences.Fence;
-import model.fences.PinguinFence;
+import model.fences.PenguinFence;
 import model.fences.Voliere;
 
 import java.util.ArrayList;
@@ -20,19 +20,24 @@ import java.util.ArrayList;
 public class Main extends Application {
 
     public static Employee employee = new Employee("Michel", true, 26);
+
     public static Fence fenceSouth = new Fence("Enclos Sud", 300, 10); // Enclos Loup
     public static Fence fenceNord = new Fence("Enclos Nord", 100, 2); // Enclos Ours
     public static Fence fenceEast = new Fence("Enclos Est", 200, 3); // Enclos Tigre
+    public static Fence fenceOuest = new PenguinFence("Enclos Ouest", 300, 30, 15, 5, 20 );
+    public static Fence privatefence = new Fence("Enclos non public", 500, 15); // Enclos Vide
     public static Aquarium wideAquarium = new Aquarium("Grand Aquarium", 1000, 100,10, 2 ); // Aquarium Baleine
     public static Aquarium mediumAquarium = new Aquarium("Aquarium Moyen", 500, 10,7, 3 ); // Aquarium Requins
     public static Aquarium smallAquarium = new Aquarium("Petit Aquarium", 10, 2,1, 30 ); // Aquarium Poissons Rouges
+    public static Aquarium privateAquarium = new Aquarium("Aquarium non public", 500, 10,2, 50 ); // Aquarium Poissons Rouges
     public static Voliere wideVoliere = new Voliere("Grande Voliere", 100, 25,5); // Voliere Aigle
-    public static PinguinFence widePinguinFence = new PinguinFence("Grand Enclos de pingouins", 300, 30, 15, 5, 20 );
+    public static Voliere privateVoliere = new Voliere("Voliere non public", 75, 20,10); // Voliere Aigle
+
     public static ArrayList<Fence> fences = new ArrayList<Fence>();
     public static Zoo zoo = new Zoo("Mon zoo", employee, 1, fences);
 
     public static int turnNumber = 1;
-    public static int maxActionPoint = 3;
+    public static int maxActionPoint = 999;
     public static int actualActionPoint = maxActionPoint;
     public static String text = new String("");
 
@@ -60,6 +65,11 @@ public class Main extends Application {
         }
         fences.add(fenceEast);
 
+        for (int i = 0; i < 4; i++) {
+            fenceOuest.addAnimal(new Penguin("Pingouin_" + i, true, 10, 30, 1));
+        }
+        fences.add(fenceOuest);
+
         for (int i = 0; i < 1; i++) {
             wideAquarium.addAnimal(new Whale("Wamer_" + i, false, 1000, 5000, 4));
         }
@@ -80,10 +90,9 @@ public class Main extends Application {
         }
         fences.add(wideVoliere);
 
-        for (int i = 0; i < 4; i++) {
-            widePinguinFence.addAnimal(new Pinguin("Pingouin_" + i, true, 10, 30, 1));
-        }
-        fences.add(widePinguinFence);
+        fences.add(privatefence);
+        fences.add(privateAquarium);
+        fences.add(privateVoliere);
 
         primaryStage.setTitle("Mon ZOO");
         Parent root = FXMLLoader.load(getClass().getResource("../view/ZooMenuView.fxml"));

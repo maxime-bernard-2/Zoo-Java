@@ -16,6 +16,7 @@ import model.animals.model.Animal;
 import model.fences.Fence;
 
 import java.io.IOException;
+import java.util.Arrays;
 
 /**
  * Classe SwapFenceController

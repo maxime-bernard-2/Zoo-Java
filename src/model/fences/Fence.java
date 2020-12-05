@@ -1,8 +1,12 @@
 package model.fences;
 
 import model.animals.model.Animal;
+import model.animals.model.Aquatic;
+import model.animals.model.Bird;
+import model.animals.model.Mammal;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Classe publique Fence
@@ -32,7 +36,6 @@ public class Fence {
      */
     @Override
     public String toString() {
-
         return "Nom de l'enclos: " + name + "\n" +
                "Superficie de l'enclos: " + area + " m2\n" +
                "Etat de l'enclos: " + (cleanliness == 0 ? "Sale": "Propre") + "\n" +
@@ -57,14 +60,26 @@ public class Fence {
         if (animals.size() < maxAnimals) {
             if (!animals.isEmpty()) {
                 if (animal.getClass() == animals.get(0).getClass()) {
-                    animals.add(animal);
+
+                    if(animal instanceof Mammal && !(animal instanceof Aquatic) && !(animal instanceof Bird)) {
+                        animals.add(animal);
+                    } else {
+                        throw new Exception("L'animal que vous tentez d'ajouter a cet enclos " +
+                                            "n'est pas compatible avec celui-ci !");
+                    }
+
                 } else {
                     throw new Exception("L'animal que vous tentez d'ajouter a cet enclos " +
-                                        "n'est pas compatible avec les animaux déjà présents: " +
+                                        "n'est pas compatible avec les animaux deja presents: " +
                                         animals.get(0).getClass().getSimpleName() );
                 }
             } else {
-                animals.add(animal);
+                if(animal instanceof Mammal && !(animal instanceof Aquatic) && !(animal instanceof Bird)) {
+                    animals.add(animal);
+                } else {
+                    throw new Exception("L'animal que vous tentez d'ajouter a cet enclos " +
+                            "n'est pas compatible avec celui-ci !");
+                }
             }
         } else {
             throw new Exception("L'enclos de destination est plein");

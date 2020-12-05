@@ -34,7 +34,7 @@ public abstract class Animal {
     public String eat() throws Exception {
         if (this.consciousness) {
             this.hungry = 100;
-            return this.name + " a bien mangé !";
+            return this.name + " a bien mange !";
         } else {
             return this.name + " n'a pas pu manger car il dort.";
         }
