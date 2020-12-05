@@ -55,6 +55,11 @@ public class Employee {
         }
     }
 
+    /**
+     * Methode <strong>recoverFence()</strong> permet de soigner les animaux d'un enclos
+     * @param fence - enclos
+     * @see Fence#recover()
+     */
     public String recoverFence(Fence fence) throws Exception {
         if (fence.getAnimals().size() > 0) {
             return fence.recover();

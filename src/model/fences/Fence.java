@@ -97,6 +97,9 @@ public class Fence {
         return  returnBuffer;
     }
 
+    /**
+     * Methode <strong>recover()</strong> permet de soigner les animaux
+     */
     public String recover() throws Exception {
         String returnBuffer = "";
         for (Animal animal: animals) {
